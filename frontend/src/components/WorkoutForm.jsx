@@ -1,4 +1,7 @@
 import { useState } from "react"
+
+const baseUrl = import.meta.env.MOD === 'production' ? 'https://workout-buddy-server-cuc7.onrender.com' : 'http://localhost:8080'
+
 export default function WorkoutForm(props) {
     const [title, setTitle] = useState('')
     const [reps, setReps] = useState('')
@@ -7,7 +10,7 @@ export default function WorkoutForm(props) {
     const [emptyFields, setEmptyFields] = useState([])
     async function handleSubmit(evt) {
         evt.preventDefault()
-        const request = await fetch('http://localhost:8080/api/workouts/', {
+        const request = await fetch(baseUrl + '/api/workouts/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
