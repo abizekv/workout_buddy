@@ -4,7 +4,7 @@ import WorkoutForm from '../components/WorkoutForm'
 
 const baseUrl = import.meta.env.MODE === 'production' ? 'https://workout-buddy-server-cuc7.onrender.com' : 'http://localhost:8080'
 
-console.log(import.meta.env.MOD)
+
 export default function Home() {
     const [workouts, setWorkouts] = useState(null)
     const getWorkouts = async () => {
