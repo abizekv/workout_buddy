@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 dayjs.extend(relativeTime)
-const baseUrl = import.meta.env.MOD === 'production' ? 'https://workout-buddy-server-cuc7.onrender.com' : 'http://localhost:8080'
+const baseUrl = import.meta.env.MODE === 'production' ? 'https://workout-buddy-server-cuc7.onrender.com' : 'http://localhost:8080'
 
 function WorkoutDetails(props) {
   const deleteWorkout = async () => {

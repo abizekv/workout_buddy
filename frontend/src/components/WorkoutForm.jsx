@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const baseUrl = import.meta.env.MOD === 'production' ? 'https://workout-buddy-server-cuc7.onrender.com' : 'http://localhost:8080'
+const baseUrl = import.meta.env.MODE === 'production' ? 'https://workout-buddy-server-cuc7.onrender.com' : 'http://localhost:8080'
 
 export default function WorkoutForm(props) {
     const [title, setTitle] = useState('')
