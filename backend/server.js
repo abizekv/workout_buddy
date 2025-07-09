@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 8080
 //global middleware
 app.use(express.json())
 app.use(cors({
-    origin:'http://localhost:5173'
+    origin:'*'
 }))
 //routes
 app.use('/api/workouts', workoutRoutes)
